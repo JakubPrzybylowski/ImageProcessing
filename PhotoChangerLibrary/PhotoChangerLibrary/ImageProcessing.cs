@@ -60,6 +60,11 @@ namespace PhotoChangerLibrary
                             currentLine[x] = 255;
                             currentLine[x + 1] = 0;
                             currentLine[x + 2] = 0;
+                        }else
+                        {
+                            currentLine[x] = (byte)oldBlue;
+                            currentLine[x + 1] = (byte)oldGreen;
+                            currentLine[x + 2] = (byte)oldRed;
                         }
                     }
                 });
