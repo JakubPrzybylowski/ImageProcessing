@@ -112,13 +112,14 @@ namespace ImageProcessingMethodTests
         public void SaveImage_FileIsCorrect_ReturnTrue()
         {
             // Arrange
-            string fileName = string.Empty;
-            Image image = null;
+            string fileName = "./Images/test2_testFact.jpg";
+
+            Image image = Image.FromFile("./Images/test2.jpg");
             ImageProcessingMethod img = new ImageProcessingMethod(new ImageProcessing());
 
 
             // Assert
-            Assert.False(img.SaveImage(image, fileName));
+            Assert.True(img.SaveImage(image, fileName));
         }
     }
 }
